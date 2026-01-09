@@ -85,7 +85,7 @@
 
 .skin-blue .sidebar-menu>li>.treeview-menu {
     margin: 0 1px;
-    background: #2c3b41
+    background: #1e1e1f
 }
 
 .skin-blue .sidebar a {
@@ -97,7 +97,7 @@
 }
 
 .skin-blue .treeview-menu>li>a {
-    color: #8aa4af
+    color: #fff
 }
 
 .skin-blue .treeview-menu>li.active>a,.skin-blue .treeview-menu>li>a:hover {
