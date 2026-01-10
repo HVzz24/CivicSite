@@ -1,5 +1,5 @@
 .skin-blue .main-header .navbar {
-    background-color: #1e1e1f
+    background-color: #434345;
 }
 
 .skin-blue .main-header .navbar .nav>li>a {
@@ -43,7 +43,7 @@
 }
 
 .skin-blue .main-header .logo {
-    background-color: #1e1e1f;
+    background-color: #434345;
     color: whitesmoke;
     border-bottom: 0 solid transparent
 }
@@ -61,7 +61,7 @@
 }
 
 .skin-blue .wrapper,.skin-blue .main-sidebar,.skin-blue .left-side {
-    background-color: #1e1e1f
+    background-color: #cccccc;
 }
 
 .skin-blue .user-panel>.info,.skin-blue .user-panel>.info>a {
@@ -69,27 +69,29 @@
 }
 
 .skin-blue .sidebar-menu>li.header {
-    color: #4b646f;
-    background: #1a2226
+    color: #000000;
+    background: cccccc;
 }
 
 .skin-blue .sidebar-menu>li>a {
-    border-left: 3px solid transparent
+    border-left: 3px solid transparent;
 }
 
 .skin-blue .sidebar-menu>li:hover>a,.skin-blue .sidebar-menu>li.active>a {
-    color: #fff;
-    background: #1e282c;
+    color: black;
+    /* color: #fff; */
+    background: #cccccc;
     border-left-color: #3c8dbc
 }
 
 .skin-blue .sidebar-menu>li>.treeview-menu {
     margin: 0 1px;
-    background: #1e1e1f
+    background: #cccccc
 }
 
 .skin-blue .sidebar a {
-    color: #b8c7ce
+    color: black;
+    /* color: #b8c7ce; */
 }
 
 .skin-blue .sidebar a:hover {
@@ -97,7 +99,7 @@
 }
 
 .skin-blue .treeview-menu>li>a {
-    color: #fff
+    color: #2b2b2b
 }
 
 .skin-blue .treeview-menu>li.active>a,.skin-blue .treeview-menu>li>a:hover {

@@ -85,15 +85,15 @@ body {
 
 .content-wrapper,.right-side {
     min-height: 100%;
-    background-color: #1e1e1f;
+    background-color: #cccccc;
     z-index: 800
 }
 
 .main-footer {
-    background: #fff;
+    /* background: #fff; */
     padding: 15px;
-    color: #444;
-    border-top: 1px solid #d2d6de
+    color: #fff;
+    /* border-top: 1px solid #d2d6de; */
 }
 
 .fixed .main-header,.fixed .main-sidebar,.fixed .left-side {
@@ -2128,7 +2128,7 @@ a:hover,a:active,a:focus {
 .info-box {
     display: block;
     min-height: 90px;
-    background: #434345;
+    background: #c;
     width: 100%;
     box-shadow: 0 1px 1px rgba(0,0,0,0.1);
     border-radius: 2px;
@@ -2311,7 +2311,7 @@ a:hover,a:active,a:focus {
     border-radius: 3px;
     -webkit-box-shadow: none;
     box-shadow: none;
-    border: 1px solid transparent
+    border: 1px solid transparent;
 }
 
 .btn.uppercase {
@@ -2441,8 +2441,8 @@ a:hover,a:active,a:focus {
     min-width: 89px;
     height: 60px;
     text-align: center;
-    color: #666;
-    border: 1px solid #ddd;
+    color: black;
+    border: 1px solid black;
     background-color: #f4f4f4;
     font-size: 12px
 }
@@ -4341,7 +4341,7 @@ table.text-center,table.text-center td,table.text-center th {
 }
 
 .bg-yellow,.callout.callout-warning,.alert-warning,.label-warning,.modal-warning .modal-body {
-    background-color: #f39c12 !important
+    background-color: #3c3c3c!important;
 }
 
 .bg-aqua,.callout.callout-info,.alert-info,.label-info,.modal-info .modal-body {
