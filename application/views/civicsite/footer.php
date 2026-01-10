@@ -100,9 +100,9 @@
 	<div class="footer--copyright bg--color-3">
 		<div class="social--bg bg--color-1"></div>
 		<div class="container">
-			<p class="text float--left">
-				&copy; 2018 <a href="http://members.civicsite.web.id">civicsite.web.id</a>. All Rights Reserved.
-			</p>
+			<p class="text float--left" style="color: #ffffff;">
+    &copy; 2018 <a href="http://members.civicsite.web.id" style="color: #ffffff;">civicsite.web.id</a>. All Rights Reserved.
+</p>
 			<ul class="nav social float--right">
 				<li>
 					<a href="#"><i class="fa fa-facebook"></i></a>
