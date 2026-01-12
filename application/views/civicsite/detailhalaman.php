@@ -5,10 +5,16 @@
 				<div class="post--item post--single post--title-largest pd--30-0">
 					<div class="post--img">
 					<?php 
-						if ($rows['gambar'] !=''){ echo "<a href='#' class='thumb'><img style='width:100%' src='".base_url()."asset/foto_berita/$rows[gambar]' alt='$rows[judul]' /></a>"; }
-						if ($rows['keterangan_gambar'] !=''){ echo "<center><p><i><b>Keterangan Gambar :</b> $rows[keterangan_gambar]</i></p></center><br>"; }
-					
-						if ($rows['youtube']!=''){
+						if (!empty($rows['gambar'])){ 
+							echo "<a href='#' class='thumb'><img style='width:100%' src='".base_url()."asset/foto_berita/$rows[gambar]' alt='$rows[judul]' /></a>"; 
+						}
+
+						// Fix: Check if index exists and is not empty
+						if (isset($rows['keterangan_gambar']) && $rows['keterangan_gambar'] != ''){ 
+							echo "<center><p><i><b>Keterangan Gambar :</b> $rows[keterangan_gambar]</i></p></center><br>"; 
+						}
+
+						if (!empty($rows['youtube'])){
 							echo "<h4>Video Terkait:</h4>";
 							if (preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $rows['youtube'], $match)) {
 								echo "<iframe width='100%' height='350px' id='ytplayer' type='text/html'
