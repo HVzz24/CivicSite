@@ -296,7 +296,8 @@ if ( ! function_exists('create_captcha'))
 
 		for ($i = 0; $i < $length; $i++)
 		{
-			if ($use_font === FALSE)
+			// Check if path is empty, file doesn't exist, or file is not readable
+			if ($use_font === FALSE || empty($font_path) || !is_readable($font_path))
 			{
 				$y = mt_rand(0 , $img_height / 2);
 				imagestring($im, $font_size, $x, $y, $word[$i], $colors['text']);
@@ -305,11 +306,18 @@ if ( ! function_exists('create_captcha'))
 			else
 			{
 				$y = mt_rand($img_height / 2, $img_height - 3);
-				imagettftext($im, $font_size, $angle, $x, $y, $colors['text'], $font_path, $word[$i]);
-				$x += $font_size;
+				// Clean the path to ensure no hidden characters or incorrect slashes
+				$real_font_path = realpath($font_path) ?: $font_path;
+				
+				if (!@imagettftext($im, $font_size, $angle, $x, $y, $colors['text'], $real_font_path, $word[$i])) {
+					// Final fallback if imagettftext fails even with a path
+					imagestring($im, $font_size, $x, $y, $word[$i], $colors['text']);
+					$x += ($font_size * 2);
+				} else {
+					$x += $font_size;
+				}
 			}
 		}
-
 		// Create the border
 		imagerectangle($im, 0, 0, $img_width - 1, $img_height - 1, $colors['border']);
 
