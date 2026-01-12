@@ -17,23 +17,24 @@
 					<div class="row">
 					<div style="padding:15px;"
 					<div class="sticky-content-inner">
-						<div class="page--title ptop--30">
-							<h2 class="h2"><?php echo "$rows[nama_kategori]"; ?></h2>
-						</div>
-									
-									<div class="map-border">
-										<div class="google-maps">
-											<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo "$iden[maps]"; ?>"></iframe>
-										</div>
-									</div>
-
-									<div class="paragraph-row">
-										<div class="column6">
-											<?php echo "$rows[alamat]";?>
-										</div>
-									</div>
-									
+								<div class="page--title ptop--30">
+									<h2 class="h2"><?php echo isset($rows['nama_kategori']) ? $rows['nama_kategori'] : 'Hubungi Kami'; ?></h2>
 								</div>
-							</div>
+								
+								<div class="map-border">
+									<div class="google-maps">
+										<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo $iden['maps']; ?>"></iframe>
+									</div>
+								</div>
 
-						</div>
+								<div class="paragraph-row">
+									<div class="column6">
+										<?php echo isset($rows['alamat']) ? $rows['alamat'] : ''; ?>
+									</div>
+								</div>
+							</div>>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
