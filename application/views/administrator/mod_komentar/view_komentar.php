@@ -16,21 +16,26 @@
                     </thead>
                     <tbody>
                   <?php 
-                    $no = 1;
-                    foreach ($record as $row){
-                    $brt = $this->model_app->view_where('berita',array('id_berita'=>$row['id_berita']))->row_array();
-                    if ($row['aktif']=='N'){ $bold = 'bold'; }else{ $bold = 'none'; }
-                    echo "<tr style='font-weight:$bold'><td>$no</td>
-                              <td><a target='_BLANK' href='".base_url()."berita/detail/$brt[judul_seo]'>$row[nama_komentar]</a></td>
-                              <td>$row[isi_komentar]</td>
-                              <td align=center>$row[aktif]</td>
-                              <td><center>
-                                <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."administrator/edit_komentarberita/$row[id_komentar]'><span class='glyphicon glyphicon-edit'></span></a>
-                                <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."administrator/delete_komentarberita/$row[id_komentar]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
-                              </center></td>
-                          </tr>";
-                      $no++;
-                    }
+                      $no = 1;
+                      foreach ($record as $row){
+                          $brt = $this->model_app->view_where('berita',array('id_berita'=>$row['id_berita']))->row_array();
+                          
+                          // Tentukan judul_seo atau fallback jika berita sudah dihapus
+                          $judul_seo = isset($brt['judul_seo']) ? $brt['judul_seo'] : '#';
+                          
+                          if ($row['aktif']=='N'){ $bold = 'bold'; }else{ $bold = 'none'; }
+                          
+                          echo "<tr style='font-weight:$bold'><td>$no</td>
+                                    <td><a target='_BLANK' href='".base_url()."berita/detail/$judul_seo'>{$row['nama_komentar']}</a></td>
+                                    <td>{$row['isi_komentar']}</td>
+                                    <td align=center>{$row['aktif']}</td>
+                                    <td><center>
+                                      <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."administrator/edit_komentarberita/{$row['id_komentar']}'><span class='glyphicon glyphicon-edit'></span></a>
+                                      <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."administrator/delete_komentarberita/{$row['id_komentar']}' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
+                                    </center></td>
+                                </tr>";
+                          $no++;
+                      }
                   ?>
                   </tbody>
                 </table>
