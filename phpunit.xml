@@ -1,0 +1,16 @@
+<phpunit bootstrap="application/tests/bootstrap.php"
+         backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         verbose="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false">
+    <testsuites>
+        <testsuite name="civicsite">
+            <directory>./application/tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

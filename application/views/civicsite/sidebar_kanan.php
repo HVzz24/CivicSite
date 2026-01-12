@@ -105,16 +105,18 @@
 							<div class="widget">
 								<?php
 								  $t = $this->model_utama->view_where('poling',array('aktif' => 'Y','status' => 'Pertanyaan'))->row_array();
-								  echo " <div style='color:#000; font-weight:bold;'>$t[pilihan] <br></div>";
-								  echo "<form method=POST action='".base_url()."polling/hasil'>";
-									  $pilih = $this->model_utama->view_where('poling',array('aktif' => 'Y','status' => 'Jawaban'));
-									  foreach ($pilih->result_array() as $p) {
-									  echo "<input class=marginpoling type=radio name=pilihan value='$p[id_poling]'/>
-											<class style=\"color:#666;font-size:12px;\">&nbsp;&nbsp;$p[pilihan]<br />";}
-									  echo "<br><input style='width: 110px; padding:2px' type=submit class=simplebtn value='PILIH' />
-								  </form>
-								  <a href='".base_url()."polling'>
-								  <input style='width: 110px; padding:2px;' type=button class=simplebtn value='LIHAT HASIL' /></a>";
+								  if ($t) {
+									  echo " <div style='color:#000; font-weight:bold;'>$t[pilihan] <br></div>";
+									  echo "<form method=POST action='".base_url()."polling/hasil'>";
+										  $pilih = $this->model_utama->view_where('poling',array('aktif' => 'Y','status' => 'Jawaban'));
+										  foreach ($pilih->result_array() as $p) {
+										  echo "<input class=marginpoling type=radio name=pilihan value='$p[id_poling]'/>
+												<class style=\"color:#666;font-size:12px;\">&nbsp;&nbsp;$p[pilihan]<br />";}
+										  echo "<br><input style='width: 110px; padding:2px' type=submit class=simplebtn value='PILIH' />
+									  </form>
+									  <a href='".base_url()."polling'>
+									  <input style='width: 110px; padding:2px;' type=button class=simplebtn value='LIHAT HASIL' /></a>";
+								  }
 								?>
 							</div>
 						</div>
