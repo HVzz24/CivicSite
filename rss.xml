@@ -3,5 +3,56 @@
 				<title>RSS CivicSite</title> 
 				<description>CivicSite is a stable and responsive public institution CMS designed for legacy PHP environments.</description>
 				<link>http://localhost/civicsite</link> 
-				<language>id-id</language></channel>
+				<language>id-id</language><item>
+						                <title>Jury trial reforms set to be announced</title>
+						                <link>http://localhost/civicsite/berita/detail/jury-trial-reforms-set-to-be-announced</link>
+						                <description>
+The government is set to announce plans to restrict the right to a jury trial in England and Wales in an attempt to turn around unprecedented backlogs and delays in justice.
+
+David Lammy, the deputy prime minister and justice secretary, will lay out the proposals in Parliament later on Tuesday.
+
+Last week his final "decision", contained in a document circulated around government, was leaked to the BBC and The Times.
+
+It is not clear if that plan - which would end jury trials other than for most serious cases including murder - has been approved by Cabinet or retreated from.
+
+
+
+The proposals to cut jury trials are based on recommendations from a senior retired judge, who advised ministers that the reform would help tackle delays.
+
+There are currently 78,000 cases waiting to be completed in Crown Courts. In practice, this means that some suspects being charged with serious crimes today may not have a trial until late 2029 or early 2030. Officials predict the caseload will grow to more than 100,000 before then, unless there is further action.
+
+Last week&#39;s leak of an internal government briefing showed final Ministry of Justice plans to create new forms of jury-less trials, where cases would be decided by a judge alone. Jury trial would therefore end for the majority of crimes currently before Crown Courts - including theft, most drugs, violent and sexual offences and fraud.
+
+Cases would only definitely go before a jury if the defendant was likely to be jailed for more than five years or was accused of murder, manslaughter or rape.
+
+Volunteer magistrates - who handle the overwhelming majority of criminal cases in the lowest courts - would see their sentencing powers doubled to two years.
+
+
+
+The leaked plan does not apply to Scotland or Northern Ireland and was circulated to other departments before final Cabinet sign off. It goes further than recommendations earlier this year from retired Court of Appeal judge Sir Brian Leveson.
+
+Speaking ahead of the announcement in Parliament, Lammy declined to confirm the final package, but said there would be an extra £550m over three years for specialist victim support services - and £34m aimed at attracting more barristers into criminal work.
+
+"Juries remain and will always remain a fundamental part of our justice system and play a very, very important role the decision," he said.
+
+"[If] someone steals an iPhone from an electrical shop tomorrow - is it right that that individual should be able to opt for a jury?
+
+"That case will be in the system, it will be two or three days in court, and therefore delay the rape, the murder, the more serious offence.
+
+"In all of the decisions that we&#39;re making, we are determined to put victims at the centre of the system and to balance those victims against the process."
+
+
+
+But Riel Karmy-Jones KC, chair of the Criminal Bar Association, said that it was not juries that had caused the unprecedented delays - but years of underfunding.
+
+"Imposing an untried, untested layer of complexity and cost in the form of any new division of the Crown Court on our desperately underfunded system with its crumbling infrastructure is counter intuitive," she said.
+
+Many criminal barristers blame the previous Conservative government for the backlogs - saying that the courts have been starved of resources for more than a decade.
+
+Robert Jenrick MP, shadow justice secretary, said David Lammy had extensively defended juries in the past - and accused him of abandoning his principles.
+
+"Labour have chosen to spend billions of extra pounds on benefits payments rather than funding the courts to get the backlog down," he said.
+
+</description>
+					                </item></channel>
   	</rss>

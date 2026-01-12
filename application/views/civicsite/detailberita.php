@@ -48,18 +48,22 @@
 						</div>
 						<div class="ad--space pd--20-0-40">
 							<?php
-							$ia = $this->model_utama->view_ordering_limit('iklantengah','id_iklantengah','ASC',8,1)->row_array();
-							echo "<a href='$ia[url]' target='_blank'>";
-								$string = $ia['gambar'];
-								if ($ia['gambar'] != ''){
-									if(preg_match("/swf\z/i", $string)) {
-										echo "<embed style='margin-top:-10px' src='".base_url()."asset/foto_iklantengah/$ia[gambar]' width='100%' height=90px quality='high' type='application/x-shockwave-flash'>";
-									} else {
-										echo "<img style='margin-top:-10px; margin-bottom:5px' width='100%' src='".base_url()."asset/foto_iklantengah/$ia[gambar]' title='$ia[judul]' class='center-block'/>";
-									}
+								$ia = $this->model_utama->view_ordering_limit('iklantengah','id_iklantengah','ASC',8,1)->row_array();
+
+								// Pastikan $ia memiliki isi dan merupakan array
+								if (is_array($ia) && !empty($ia)) {
+									echo "<a href='{$ia['url']}' target='_blank'>";
+										$string = $ia['gambar'];
+										if ($ia['gambar'] != '') {
+											if (preg_match("/swf\z/i", $string)) {
+												echo "<embed style='margin-top:-10px' src='".base_url()."asset/foto_iklantengah/{$ia['gambar']}' width='100%' height='90px' quality='high' type='application/x-shockwave-flash'>";
+											} else {
+												echo "<img style='margin-top:-10px; margin-bottom:5px' width='100%' src='".base_url()."asset/foto_iklantengah/{$ia['gambar']}' title='{$ia['judul']}' class='center-block'/>";
+											}
+										}
+									echo "</a>";
 								}
-							echo "</a>";
-						?>
+							?>
 						</div>
 						<div class="post--tags">
 							<ul class="nav">
